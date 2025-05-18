@@ -1,33 +1,76 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>我的网页工具</title>
   <style>
     body {
-      font-family: sans-serif;
-      text-align: center;
-      background: #f0f0f0;
-      padding: 2rem;
-    }
-    .card {
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      max-width: 600px;
+      font-family: Arial, sans-serif;
+      max-width: 800px;
       margin: auto;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      background-color: #f7f9fc;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 40px 0;
+    }
+    h1 {
+      color: #4a90e2;
+    }
+    section {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    .alert {
+      color: red;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <div class="card">
+  <header>
     <h1>欢迎来到我的网页工具</h1>
     <p>这里是你的工具、订阅服务或介绍。</p>
-    <a href="https://buy.stripe.com/test_abcd1234" target="_blank">
-      <button>点击订阅（Stripe测试按钮）</button>
-    </a>
-  </div>
+  </header>
+
+  <section id="tool">
+    <h2>🛠 工具介绍</h2>
+    <p>这里可以放你的网页小工具说明，比如代理订阅转换、API 接口工具、或者其他前端小应用。</p>
+  </section>
+
+  <section id="subscribe">
+    <h2>🧾 订阅服务</h2>
+    <p>点击下面按钮进入测试支付（仅用于演示）</p>
+    <button onclick="alert('Stripe支付测试（中国大陆无法正式使用）')">Stripe 测试按钮</button>
+  </section>
+
+  <section id="payment">
+    <h2>💳 万里汇收款信息</h2>
+    <p>如需打款或订阅服务，请使用以下银行账户信息：</p>
+    <ul>
+      <li><strong>账户持有人姓名：</strong>（你的公司名称或收款人名称）</li>
+      <li><strong>账户号码：</strong> 10000015714491</li>
+      <li><strong>币种：</strong> USD 美元</li>
+      <li><strong>银行名称：</strong> JPMorgan Chase Bank, N.A.</li>
+      <li><strong>SWIFT/BIC：</strong> CHASUS33</li>
+      <li><strong>ACH 汇款路线号码：</strong> 028000024</li>
+      <li><strong>Wire 汇款路线号码：</strong> 021000021</li>
+      <li><strong>银行地址：</strong> 383 Madison Avenue, New York, United States</li>
+    </ul>
+    <p class="alert">⚠️ 请确保付款信息准确无误。此账户仅支持美元（USD）。</p>
+  </section>
 </body>
 </html>
